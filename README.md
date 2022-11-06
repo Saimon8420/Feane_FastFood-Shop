@@ -1,6 +1,9 @@
 # Feane Fast-food Shop
-***
 ## Live Site Link : https://creative-pudding-84d5d7.netlify.app/
+
+![alt text](https://github.com/[Saimon8420]/[
+Feane_FastFood-Shop]/blob/[main]/about-img.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
