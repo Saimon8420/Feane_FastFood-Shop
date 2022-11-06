@@ -1,7 +1,12 @@
 # Feane Fast-food Shop
 ## Live Site Link : https://creative-pudding-84d5d7.netlify.app/
 
-![alt text](/public/images/about-img.png)
+### Site Outlook
+![alt text](/public/outlook/1.png)
+![alt text](/public/outlook/2.png)
+![alt text](/public/outlook/3.png)
+![alt text](/public/outlook/4.png)
+![alt text](/public/outlook/5.png)
 
 # Getting Started with Create React App
 
