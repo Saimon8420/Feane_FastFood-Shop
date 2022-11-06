@@ -1,0 +1,65 @@
+[
+    {
+        "id": "101",
+        "name": "Delicious Pizza",
+        "price": "20",
+        "description": "",
+        "image": "/images/f1.png"
+    },
+    {
+        "id": "102",
+        "name": "Delicious Burger",
+        "price": "15",
+        "description": "",
+        "image": "/images/f2.png"
+    },
+    {
+        "id": "103",
+        "name": "Delicious Pizza",
+        "price": "17",
+        "description": "",
+        "image": "/images/f3.png"
+    },
+    {
+        "id": "104",
+        "name": "Delicious Pasta",
+        "price": "18",
+        "description": "",
+        "image": "/images/f4.png"
+    },
+    {
+        "id": "105",
+        "name": "French Fries",
+        "price": "10",
+        "description": "",
+        "image": "/images/f5.png"
+    },
+    {
+        "id": "106",
+        "name": "Delicious Pizza",
+        "price": "15",
+        "description": "",
+        "image": "/images/f6.png"
+    },
+    {
+        "id": "107",
+        "name": "Tasty Burger",
+        "price": "12",
+        "description": "",
+        "image": "/images/f7.png"
+    },
+    {
+        "id": "108",
+        "name": "Tasty Burger",
+        "price": "14",
+        "description": "",
+        "image": "/images/f8.png"
+    },
+    {
+        "id": "109",
+        "name": "Delicious Pasta",
+        "price": "10",
+        "description": "",
+        "image": "/images/f9.png"
+    }
+]

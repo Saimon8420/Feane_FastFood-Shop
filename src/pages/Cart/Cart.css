@@ -1,0 +1,87 @@
+.display-bill {
+    margin: 10px;
+    background-color: #e2e5e9;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 120px;
+}
+
+.display-bill h4 {
+    border-bottom: 1px solid gray;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.display-bill h6 {
+    border-top: 1px solid gray;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.sub-info {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    gap: 10px;
+}
+
+.sub-info p {
+    width: 100%;
+    margin-top: 10px;
+    font: caption;
+    background-color: darksalmon;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    font-family: 'Capriola', sans-serif;
+}
+
+.bill-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0px auto;
+    gap: 10px;
+}
+
+.bill-container p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.order-info h4 {
+    width: 50%;
+    margin: 0px auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+@media only screen and (max-width:576px) {
+    .display-bill {
+        margin-top: 80px;
+    }
+
+    .bill-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sub-info {
+        width: 100%;
+        margin: 0px auto;
+    }
+}

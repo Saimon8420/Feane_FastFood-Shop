@@ -1,0 +1,75 @@
+.logo-name {
+    font-size: 25px;
+    font-weight: bolder;
+    animation-name: flashing;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+@keyframes flashing {
+    0% {
+        color: cornsilk;
+    }
+
+    10% {
+        color: #8e44ad;
+    }
+
+    20% {
+        color: #1abc9c;
+    }
+
+    30% {
+        color: #d35400;
+    }
+
+    40% {
+        color: gainsboro;
+    }
+
+    50% {
+        color: #34495e;
+    }
+
+    60% {
+        color: coral;
+    }
+
+    70% {
+        color: #2980b9;
+    }
+
+    80% {
+        color: #f1c40f;
+    }
+
+    90% {
+        color: #2980b9;
+    }
+
+    100% {
+        color: pink;
+    }
+}
+
+.me-auto {
+    margin: auto;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-icons p {
+    display: inline-block;
+    margin: auto 0px;
+    color: white;
+    width: 24px;
+}
+
+.nav-icons p:hover {
+    color: orange;
+}

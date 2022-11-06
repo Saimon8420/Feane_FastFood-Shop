@@ -1,0 +1,53 @@
+.display-foods {
+    width: 100%;
+    background-color: rgb(34, 40, 49);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.foods-image {
+    background-color: rgb(241, 242, 243);
+    border-radius: 0px 0px 0px 25px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0px 25px;
+    padding: 10px;
+}
+
+.foods-image img {
+    width: 75%;
+    height: 75%;
+}
+
+.display-foods:hover>.foods-image>img {
+    width: 100%;
+    height: 100%;
+}
+
+.price-cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.cart-icons button {
+    width: 25px;
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+    padding: 0px 2px;
+    border: none;
+}
+
+.cart-icons button:hover {
+    background-color: white;
+    color: black;
+}
+
+.price-cart-container p {
+    margin: auto 0px;
+}

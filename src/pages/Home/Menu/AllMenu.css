@@ -1,0 +1,69 @@
+.menu-container {
+    padding: 5%;
+    /* width: 100%; */
+}
+
+.filter-section {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.filter-section button {
+    border: none;
+    background-color: white;
+}
+
+#default-btn {
+    background-color: rgb(34, 40, 49);
+    color: white;
+    border-radius: 5px;
+}
+
+#default {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+#after-filter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+@media only screen and (max-width:576px) {
+    #default {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #after-filter {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media only screen and (min-width:577px) and (max-width:980px) {
+    #default {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #after-filter {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

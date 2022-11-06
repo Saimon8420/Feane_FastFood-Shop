@@ -1,0 +1,58 @@
+.home-container {
+    margin-top: 30px;
+}
+
+.about-us {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(34, 40, 49);
+    padding: 5%;
+    align-items: center;
+}
+
+#about-info {
+    color: #91C483;
+}
+
+.image img {
+    width: 100%;
+}
+
+.description {
+    width: 100%;
+    color: white;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.booking-container {
+    width: 100%;
+    background-color: #dee4e9;
+    background-color: white;
+}
+
+@media only screen and (max-width:576px) {
+    .home-container {
+        margin-top: 50px;
+    }
+
+    .about-us {
+        width: 100%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .description {
+        order: -1;
+        margin-left: 0px;
+    }
+}
+
+/* @media only screen and (min-width:577px) and (max-width:976px) {
+    .home-container {
+        width: 100%;
+    }
+} */

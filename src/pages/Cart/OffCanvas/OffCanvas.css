@@ -1,0 +1,64 @@
+.canvas-header {
+    background-color: rgb(66, 135, 245);
+    background-color: #9a97b8;
+    background-color: #4b5461;
+    background-color: #37393c;
+    font-family: 'Capriola', sans-serif;
+}
+
+.canvas-title {
+    color: white;
+}
+
+.canvas-body {
+    margin: 10px;
+    font-family: 'Capriola', sans-serif;
+}
+
+.canvas-body a {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.canvas-body a:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.canvas-body a:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+#cart-quantity {
+    position: relative;
+    background-color: rgb(50, 50, 233);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#cart-quantity span {
+    position: absolute;
+    top: -14px;
+    left: 11px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 0px 5px;
+    border: 2px solid white;
+    font-weight: bold;
+}

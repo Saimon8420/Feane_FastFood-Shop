@@ -1,0 +1,42 @@
+.shippingInfo-container {
+    background-color: #DEF5E5;
+    background-color: #EEEEEE;
+    background-color: #EEF1FF;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.shipping-form span {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.shipping-form input,
+textarea {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.shipping-form input:focus,
+textarea:focus {
+    outline-style: dashed;
+    outline-color: #5DA7DB;
+    outline-width: 1px;
+}
+
+.shipping-form button {
+    border: none;
+    background-color: #87A2FB;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.shipping-form button:hover {
+    background-color: #6F38C5;
+}
