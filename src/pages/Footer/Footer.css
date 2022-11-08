@@ -2,7 +2,6 @@
     margin-top: 20px;
     background-color: rgb(34, 40, 49);
     color: white;
-    /* width: 100%; */
 }
 
 p svg {
@@ -31,23 +30,16 @@ p svg {
 
 .social-icons img {
     width: 30px;
+    height: 40px;
     transition: width 1ms ease-in;
+    border-radius: 10px;
 }
 
 .social-icons img:hover {
     width: 40px;
+    height: 40px;
     cursor: pointer;
 }
-
-/* @keyframes zoom {
-    0% {
-        width: 30px;
-    }
-
-    100% {
-        width: 40px;
-    }
-} */
 
 .rights-info {
     padding-bottom: 20px;
