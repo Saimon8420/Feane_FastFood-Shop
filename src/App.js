@@ -5,7 +5,10 @@ import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import Footer from './pages/Footer/Footer';
 import Cart from './pages/Cart/Cart';
-import ShippingInfo from './pages/Cart/ShippingInfo/ShippingInfo';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import ProtectedRoute from './pages/Protected/ProtectedRoute';
+import Profile from './Profile/Profile';
 
 const CartContext = createContext([]);
 function App() {
@@ -25,16 +28,27 @@ function App() {
             <Route path='/home' element={<Home />}
             ></Route>
 
-            <Route path='/home/cart' element={<Cart />}></Route>
+            <Route path='/home/cart' element={
+              <ProtectedRoute>
+                <Cart />
+              </ProtectedRoute>
+            }></Route>
 
-            <Route></Route>
+            <Route path='/profile' element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }></Route>
+
+            <Route path='/login' element={<Login />}></Route>
+
+            <Route path='/register' element={<Register />}></Route>
           </Routes>
         </div>
         <div>
           <Footer />
         </div>
       </div>
-
     </CartContext.Provider>
   );
 }

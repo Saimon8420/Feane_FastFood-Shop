@@ -33,6 +33,12 @@
     background-color: white;
 }
 
+.toast {
+    background-color: red;
+    color: yellow;
+}
+
+
 @media only screen and (max-width:576px) {
     .home-container {
         margin-top: 50px;

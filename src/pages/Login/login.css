@@ -1,0 +1,77 @@
+.display-login {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 150px auto;
+}
+
+.display-login h2,
+h4 {
+    color: rgb(82, 177, 234);
+}
+
+.display-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formInput {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+    margin: 0px 5px;
+}
+
+.formInput input {
+    height: 50px;
+    border-width: 2px;
+    border-radius: 8px;
+    /* text-align: center; */
+    padding-left: 10px;
+    width: 50%;
+    margin: auto;
+    border: none;
+    background-color: rgb(222, 219, 219);
+}
+
+.formInput input:focus {
+    outline-color: rgb(82, 177, 234);
+    shape-outside: cross-fade();
+    border: none;
+    background-color: white;
+}
+
+.display-form button {
+    margin: 15px auto;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: rgb(82, 177, 234);
+    color: white;
+}
+
+.display-form button :disabled,
+button[disabled] {
+    opacity: 0.5;
+}
+
+.errorMsg {
+    margin: 5px 0px 0px 0px;
+    color: red;
+}
+
+.successMsg {
+    margin: 5px 0px 0px 0px;
+    color: green;
+}
+
+@media only screen and (max-width:576px) {
+    .display-login {
+        margin: 100px auto;
+    }
+
+    .formInput input {
+        width: 100%;
+    }
+}

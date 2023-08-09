@@ -1,0 +1,105 @@
+.display-profile {
+    margin: 130px auto 150px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px;
+    gap: 5px;
+    padding: 5px;
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.profileDetails h5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.profileDetails span {
+    text-align: left;
+}
+
+.profileDetails button {
+    margin: 5px auto;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.updateBtn {
+    background-color: rgb(89, 181, 255);
+}
+
+.updateBtn:hover {
+    color: white;
+}
+
+.editBtn {
+    background-color: rgb(82, 177, 234);
+}
+
+.logout-btn {
+    background-color: rgb(241, 14, 14);
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 10px;
+    color: white;
+}
+
+.profileDetails input {
+    background-color: rgb(87, 102, 125);
+    color: white;
+}
+
+.orderDetails {
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.eachDetails {
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: justify;
+    text-overflow: ellipsis;
+}
+
+.eachOrder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    padding-left: 5px;
+}
+
+.status {
+    background-color: rgb(89, 158, 255);
+    padding: 3px;
+    border-radius: 6px;
+    color: white;
+}
+
+.orderType {
+    background-color: rgb(142, 195, 176);
+    padding: 3px;
+    border-radius: 6px;
+    color: white;
+}
+
+@media only screen and (max-width:766px) {
+    .display-profile {
+        width: 95%;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px;
+    }
+}

@@ -1,6 +1,5 @@
 .menu-container {
     padding: 5%;
-    /* width: 100%; */
 }
 
 .filter-section {
@@ -15,24 +14,22 @@
 
 .filter-section button {
     border: none;
-    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
 }
 
-#default-btn {
+.filter-section button:hover {
+    background-color: gray;
+}
+
+.btn {
     background-color: rgb(34, 40, 49);
     color: white;
     border-radius: 5px;
+    margin: 5px;
 }
 
 #default {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-}
-
-#after-filter {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,22 +43,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-
-    #after-filter {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
 }
 
 @media only screen and (min-width:577px) and (max-width:980px) {
     #default {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    #after-filter {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;

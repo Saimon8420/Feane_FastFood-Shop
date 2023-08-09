@@ -6,8 +6,6 @@ import './Cart.css';
 import ShippingInfo from './ShippingInfo/ShippingInfo';
 const Cart = () => {
     const [cartItem, setCartItem] = useContext(CartContext);
-    const [defaultaddress, setDefaultaddess] = useState([]);
-
     let i = 1;
     let grandTotal;
 
@@ -39,16 +37,10 @@ const Cart = () => {
                         <p>${added.quantity * added.price}</p>
                     </div>)
                 }
-                <h6>Grand Total: ${grandTotal}</h6>
+                <h6>Sub Total: ${grandTotal}</h6>
             </div>
             <div className='order-info'>
-                <h4>Confirm Order</h4>
-                {
-                    defaultaddress.length !== 0 ?
-                        <span><input type="checkbox" name="" id="" />Default Address</span>
-                        :
-                        <ShippingInfo />
-                }
+                <ShippingInfo total={grandTotal} />
             </div>
         </div>
     );
