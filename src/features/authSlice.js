@@ -30,7 +30,9 @@ const authSlice = createSlice({
         },
         loginUser: (state, action) => {
             // const register = current(state.register);
+            console.log(action.payload);
             const matchedUser = state.register.find((each) => (each.email === action?.payload?.email && each.password === action?.payload?.password));
+            console.log(matchedUser);
             if (matchedUser) {
                 state.login = [matchedUser];
                 state.loginError = [];
@@ -58,7 +60,7 @@ const authSlice = createSlice({
             }
             else {
                 // const register = current(state.register);
-                const matchedUser = state.register.find((each) => each.email.includes(action?.payload?.email));
+                const matchedUser = state?.register?.find((each) => each?.email?.includes(action?.payload?.email));
                 console.log(matchedUser);
                 if (!matchedUser) {
                     state.register = [...state.register, { ...action?.payload, userId: id }];
@@ -76,14 +78,12 @@ const authSlice = createSlice({
             }
         },
         orders: (state, action) => {
-            if (!state.orders) {
-                state.orders = [...action?.payload];
-                state.orderSuccess = [];
+            if (state.orders.length <= 0) {
+                state.orders = [action?.payload];
                 state.orderSuccess = ["Order successfully placed"];
             }
             else {
-                state.orders = [...state.orders, ...action?.payload];
-                state.orderSuccess = [];
+                state.orders = [...state.orders, action?.payload];
                 state.orderSuccess = ["Order successfully placed"];
             }
         },

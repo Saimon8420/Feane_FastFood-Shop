@@ -104,15 +104,13 @@ textarea:focus {
     border-radius: 8px;
     border: none;
     color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .inactive {
-    border: none;
-    background-color: #4367dc;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    opacity: 0.5;
-    color: whitesmoke;
     display: none;
 }
 

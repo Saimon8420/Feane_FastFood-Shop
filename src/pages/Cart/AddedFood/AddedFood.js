@@ -44,7 +44,8 @@ const AddedFood = () => {
         <>
             <ToastContainer toastStyle={{ backgroundColor: "rgb(34, 40, 49)", color: "white" }} />
             {
-                cartItem.map(added => <div className='display-addedFood'>
+                cartItem.map(added => <div className='display-addedFood'
+                    key={added.id}>
                     <img src={added.image} alt="" />
                     <h6>{added.name}</h6>
                     <div className='display-quantity'>

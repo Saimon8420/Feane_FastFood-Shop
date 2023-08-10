@@ -78,6 +78,7 @@ const Profile = () => {
     }
     const allOrders = userData?.orders?.filter((each) => each.userId === userData?.login[0]?.userId);
     let serial = 1;
+    console.log(userData);
     return (
         <div>
             <ToastContainer toastStyle={{ backgroundColor: "rgb(34, 40, 49)", color: "white" }} />

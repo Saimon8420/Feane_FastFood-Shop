@@ -48,11 +48,16 @@ const ShippingInfo = ({ total }) => {
     }
     const [trigger, setTrigger] = useState(false);
     const handleConfirm = async () => {
-        const orderDetails = { orderItems, date: orderDate, status: orderStatus, type: orderType, userId: userData?.login[0]?.userId, total: totalAmount };
-        dispatch(orders(orderDetails));
-        triggerToast();
-        setCartItem([]);
-        setTrigger(true);
+        if (window.confirm("Confirm Order?")) {
+            const orderDetails = { orderItems, date: orderDate, status: orderStatus, type: orderType, userId: userData?.login[0]?.userId, total: totalAmount };
+            dispatch(orders(orderDetails));
+            triggerToast();
+            setCartItem([]);
+            setTrigger(true);
+        }
+        else {
+            window.alert("Cancel Order");
+        }
     }
     useEffect(() => {
         if (trigger && userData?.orderSuccess?.[0]) {

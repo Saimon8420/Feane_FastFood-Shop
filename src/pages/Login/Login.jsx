@@ -6,6 +6,7 @@ import { loginUser } from '../../features/authSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { Slide, ToastContainer, toast } from 'react-toastify';
+import { motion } from "framer-motion"
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -65,40 +66,50 @@ const Login = () => {
         }
     }, [userData, navigate, trigger]);
     return (
-        <div className='display-login'>
-            <ToastContainer toastStyle={{ backgroundColor: "rgb(34, 40, 49)", color: "white" }} />
-            <br />
-            <h2>Welcome to Login</h2>
-            <br />
-            <h4>Enter your credential to continue</h4>
-            <br />
-            <div className='display-form'>
-                <form onSubmit={handleForm}>
-                    <div className='formInput'>
-                        <input type="email" name="email" id="" placeholder='Your Email' required onChange={(e) => setEmail(e.target.value)} />
-                        {
-                            validEmail === false && email.length > 0 && <p className='errorMsg'><FontAwesomeIcon icon={faCircleXmark} />Invalid Email</p>
-                        }
-                        {
-                            validEmail === true && email.length > 0 && <p className='successMsg'><FontAwesomeIcon icon={faCircleCheck} />Valid Email</p>
-                        }
-                        <input type="password" name="password" id="" placeholder='Your password?' required onChange={(e) => setPassword(e.target.value)} />
-                    </div>
-                    {
-                        validPass === false && password.length > 0 && <p className='errorMsg'><FontAwesomeIcon icon={faCircleXmark} />Invalid Password</p>
-                    }
-                    {
-                        validPass === true && password.length > 0 && <p className='successMsg'><FontAwesomeIcon icon={faCircleCheck} />Valid Password</p>
-                    }
+        <section>
+            <motion.div
+            // animate={{
+            //     scale: [1, 2, 2, 1, 1],
+            //     rotate: [0, 0, 270, 0, 0],
+            //     borderRadius: ["20%", "20%", "50%", "50%", "20%", "0%"],
+            // }}>
+            >
+                <div className='display-login'>
+                    <ToastContainer toastStyle={{ backgroundColor: "rgb(34, 40, 49)", color: "white" }} />
                     <br />
-                    < button
-                        disabled={(email === "" && password === "")}
-                        type='submit'><span>Login</span>
-                    </button>
-                    <p>Haven't any account? <span onClick={() => navigate("/register")}>Please Register</span> </p>
-                </form>
-            </div>
-        </div >
+                    <h2>Welcome to Login</h2>
+                    <br />
+                    <h4>Enter your credential to continue</h4>
+                    <br />
+                    <div className='display-form'>
+                        <form onSubmit={handleForm}>
+                            <div className='formInput'>
+                                <input type="email" name="email" id="" placeholder='Your Email' required onChange={(e) => setEmail(e.target.value)} />
+                                {
+                                    validEmail === false && email.length > 0 && <p className='errorMsg'><FontAwesomeIcon icon={faCircleXmark} />Invalid Email</p>
+                                }
+                                {
+                                    validEmail === true && email.length > 0 && <p className='successMsg'><FontAwesomeIcon icon={faCircleCheck} />Valid Email</p>
+                                }
+                                <input type="password" name="password" id="" placeholder='Your password?' required onChange={(e) => setPassword(e.target.value)} />
+                            </div>
+                            {
+                                validPass === false && password.length > 0 && <p className='errorMsg'><FontAwesomeIcon icon={faCircleXmark} />Invalid Password</p>
+                            }
+                            {
+                                validPass === true && password.length > 0 && <p className='successMsg'><FontAwesomeIcon icon={faCircleCheck} />Valid Password</p>
+                            }
+                            <br />
+                            < button
+                                // disabled={(email === "" && password === "")}
+                                type='submit'><span>Login</span>
+                            </button>
+                            <p>Haven't any account? <span onClick={() => navigate("/register")}>Please Register</span> </p>
+                        </form>
+                    </div>
+                </div >
+            </motion.div>
+        </section >
     );
 };
 
