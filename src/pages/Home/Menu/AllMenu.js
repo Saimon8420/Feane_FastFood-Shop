@@ -4,7 +4,7 @@ import './AllMenu.css';
 import { CartContext } from '../../../App';
 const AllMenu = () => {
     const [foods, setFoods] = useState([]);
-    const [filterFoods, setFilterFoods] = useState("");
+    const [filterFoods, setFilterFoods] = useState("all");
     const [cartItem, setCartItem] = useContext(CartContext);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const AllMenu = () => {
         <div className='menu-container'>
             <h2>Our Menu</h2>
             <div className='filter-section'>
-                <button className={filterFoods === "" && 'btn'} onClick={() => setFilterFoods("")}>All</button>
+                <button className={filterFoods === "all" && 'btn'} onClick={() => setFilterFoods("all")}>All</button>
                 <button className={filterFoods === "burger" && 'btn'} onClick={() => setFilterFoods('burger')}>Burger</button>
                 <button className={filterFoods === "pizza" && 'btn'} onClick={() => setFilterFoods('pizza')}>Pizza</button>
                 <button className={filterFoods === "pasta" && 'btn'} onClick={() => setFilterFoods('pasta')}>Pasta</button>
@@ -36,12 +36,13 @@ const AllMenu = () => {
             </div>
             <div className='food-container'>
                 <div id='default'>
-                    {filterFoods.length !== "" ?
-                        foods.filter(each => each.name.toLowerCase().includes(filterFoods)).map(food => <Foods
+                    {filterFoods === "all" ?
+                        foods.map(food => <Foods
                             key={food.id}
                             food={food}
                             selected={selected}
-                        ></Foods>) : foods.map(food => <Foods
+                        ></Foods>) :
+                        foods.filter(each => each.name.toLowerCase().includes(filterFoods)).map(food => <Foods
                             key={food.id}
                             food={food}
                             selected={selected}
