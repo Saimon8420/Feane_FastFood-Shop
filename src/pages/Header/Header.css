@@ -57,7 +57,8 @@
 }
 
 .nav-icons {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
     gap: 10px;

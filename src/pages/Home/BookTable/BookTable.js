@@ -13,6 +13,7 @@ const BookTable = () => {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
 
+    const [validNum, setValidNum] = useState("");
     const handleForm = (event) => {
         event.preventDefault();
         if (name.length > 0 && email.length > 0 && number.length > 0 && persons.length > 0 && date.length > 0 && time.length > 0) {
@@ -27,9 +28,9 @@ const BookTable = () => {
                 theme: "light",
             });
         }
+        setValidNum("");
         event.target.reset();
     }
-    const [validNum, setValidNum] = useState(true);
     useEffect(() => {
         setValidNum(/^(01|008801|8801|\+8801)[0-9]{9}$/.test(number));
     }, [number, setValidNum])
@@ -45,10 +46,10 @@ const BookTable = () => {
 
                             <input type="tel" name="phone" id="" placeholder='Phone format : 01521333567 || +8801521333567' required onChange={(e) => setNumber(e.target.value)} />
                             {
-                                !validNum && number.length > 0 && <p className='errorMsg'><FontAwesomeIcon icon={faCircleXmark} />Invalid Number</p>
+                                validNum === false && number.length > 0 && <p className='errorMsg'><FontAwesomeIcon icon={faCircleXmark} />Invalid Number</p>
                             }
                             {
-                                validNum && number.length > 0 && <p className='successMsg'><FontAwesomeIcon icon={faCircleCheck} />Valid Number</p>
+                                validNum === true && number.length > 0 && <p className='successMsg'><FontAwesomeIcon icon={faCircleCheck} />Valid Number</p>
                             }
 
                             <input type="email" name="email" id="" placeholder='Your Email' required onChange={(e) => setEmail(e.target.value)} />
